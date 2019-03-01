@@ -1,0 +1,11 @@
+.content {
+  height: 320rpx;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  width: 100%;
+  padding: 10px;
+  line-height: 22px;
+  margin-right: 0;
+  font-size:30rpx;
+}

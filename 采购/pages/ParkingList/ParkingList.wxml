@@ -1,0 +1,23 @@
+<view class='cotent'>
+  <block wx:for='{{parkList}}' wx:key='' wx:if='{{parkingList != 0}}'>
+    <view class='parkingList' data-id='{{item.parkingplaceid}}' bindtap='judgeParkDetaile'>
+      <view class='parkingList-left'>
+        <view class='priceandTime'>
+          <view class='appointmentTime'>
+            <view>车位编号:{{item.parkingplaceno}}</view>
+            <view>车位地址:{{item.addres}}</view>
+          </view>
+          <view class='price'>
+            <view>平均价:{{item.avgPrice}}元/时</view>
+            <view wx:if='{{item.punishment !=null}}'>超时价:{{item.punishment}}元/时</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </block>
+  <view class='empty-layout' style='height:{{searchContentHeight}}' wx:if='{{parkList.length == 0}}'>
+    <image class='empty-icon' src='../../img/search-empty.png'></image>
+    <text class='empty-text'>暂无满足条件车位</text>
+  </view>
+</view>

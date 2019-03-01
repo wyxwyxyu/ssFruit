@@ -1,0 +1,20 @@
+<view wx:for="{{items}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" 
+ bindtouchmove="touchmove" >
+
+  <view class='content'>
+    <view class='word'>{{item.carnumber}}</view>
+    <view class='mini' style='color:green'>已认证</view>
+  </view>
+  <view class="del" catchtap="del" data-carid="{{item.usercarid}}" data-index="{{index}}">删除</view>
+</view>
+
+
+
+<view class='last' bindtap='bindadd'>
+  <view class='button'>✚ 添加车辆</view>
+</view>
+
+
+
+
+

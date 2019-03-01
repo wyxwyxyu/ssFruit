@@ -1,0 +1,29 @@
+<view class='box'>
+  <view class='row'>
+    <view class='word'>预约时间：</view>
+    <view class='word'>2018-8-20 15:58</view>
+  </view>
+  <view class='row'>
+    <view class='word'>预约时长：</view>
+    <view class='word'>2小时</view>
+  </view>
+  <view class='row'>
+    <view class='word'>订单状态：</view>
+    <view class='word'>预约成功</view>
+  </view>
+</view>
+<!-- 重复以上代码 -->
+<view class='box'>
+  <view class='row'>
+    <view class='word'>预约时间：</view>
+    <view class='word'>2018-8-22 05:08</view>
+  </view>
+  <view class='row'>
+    <view class='word'>预约时长：</view>
+    <view class='word'>3小时</view>
+  </view>
+  <view class='row'>
+    <view class='word'>订单状态：</view>
+    <view class='word'>预约成功</view>
+  </view>
+</view>

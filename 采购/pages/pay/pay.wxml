@@ -1,0 +1,4 @@
+<view>
+<input placeholder='请填写支付方式' bindblur='wayHandle' ></input>
+<input placeholder='请填写支付金额' bindblur='moneyHandle'></input>
+</view>

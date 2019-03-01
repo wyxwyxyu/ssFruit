@@ -1,0 +1,181 @@
+.add{
+  width:100%;
+  display: flex;
+  flex-direction:column;
+}
+.int{
+  height:40px;
+  line-height:40px;
+}
+.manager{
+  display: flex;
+  flex-direction: row;
+  padding:10px 10px;
+  width:100%;
+  height:50px;
+  line-height: 50px;
+  margin: 0 auto;
+  color:#0f7dde;
+}
+.section{
+  width:60%;
+  height:40px;
+  border:1px solid #0f7dde;
+  line-height: 40px;
+  text-align: center;
+  color:#000;
+  border-radius:8px;
+  margin:5px 5px 0px 10px;
+}
+
+.text{
+  width:30%;
+  height: 40px;
+  line-height: 50px; 
+  text-align:center;
+  border-radius:8px;
+}
+
+.text2{
+height: 40px;
+line-height: 40px;
+}
+.button{
+  width:90%;
+  margin:20px auto;
+  background: #0f7dde;
+  color:#fff;
+}
+.modal-box{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:#fff;
+  font-size: 26rpx;
+  overflow-y: scroll
+}
+
+
+.modal-content{
+  border-radius: 10rpx;
+  overflow-y: auto;
+  padding-bottom: 50px
+}
+
+
+.info-list{ width: 96%; margin-left: 2%; height: 160rpx; padding-top: 20rpx; border-bottom: 1rpx solid #cfcfcf; }
+.info-list .list-left{ width:100%; height: 100%;}
+.list-left .left-top{ width: 100%; height: 100rpx;display: flex;flex-direction: row;}
+.info-list .left-top wx-text{ display: block; width: 100%; height: 100%; overflow: hidden; font-size: 32rpx; }
+.left-btm{width:100%;justify-content:space-between;display: flex;}
+.none-data{ width: 100%; height: 500rpx; text-align: center; margin-top: 200rpx; }
+.none-data wx-image{ width: 250rpx; height: 200rpx; }
+.none-data wx-text{ color: gray; display: block; margin-top: 20rpx; }
+.searchInput{
+  width: 100vw;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+ display: flex;
+  align-items: center;
+  position: relative;
+}
+.searchInput input{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  padding-left: 10px;
+ 
+}
+.cancel-wrapper {
+  width: 80rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.delete-input{
+  width: 30rpx;
+  height: 30rpx;
+}
+.empty-layout{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-icon{
+  margin-top: 300rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.empty-text{
+  color: #666;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+.input-address {
+  flex: 1;
+}
+.fu{
+  display: flex;
+  flex-direction:row;
+}
+.jia{
+  width:95%;
+  padding:7px 0px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  text-align: center;
+  margin:20rpx auto 0;
+}
+
+.modal-foot button{
+  position: fixed;
+  bottom:0px;
+}
+
+.moshi{
+  width:80%;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  border-radius:10px;
+  border:1px solid #066db8;
+  margin:10px auto;
+}
+.head{
+  width:100%;
+  height:auto;
+  border-top:1px solid #066db8;
+  border-bottom:1px solid #066db8;
+}
+.wpv{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  font-size:35rpx;
+  margin:10rpx 0;
+}
+.pattern{
+  width:40%;
+  height:80rpx;
+  display: flex;
+  flex-direction:row;
+}
+.frame{
+  width:70rpx;
+  height:70rpx;
+  text-align: center;
+  line-height:70rpx;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin-top:5rpx;
+}

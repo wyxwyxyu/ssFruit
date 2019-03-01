@@ -1,0 +1,75 @@
+/* pages/ParkingList/ParkingList.wxss */
+page{
+  height: 100%;
+  background: #EFEFF4;
+}
+.cotent{
+  width: 100%;
+  height: 100%;
+}
+.parkingList{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fefefe;
+  margin-bottom: 20rpx;
+}
+.parkingList-left{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.parkingNum{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 60rpx
+}
+.priceandTime{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.appointmentTime{
+  width: 500rpx;
+  /* height: 200rpx; */
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  box-sizing: border-box
+}
+
+.price{
+  width: 290rpx;
+  /* height: 200rpx; */
+  line-height: 1.5;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: #e4393c
+}
+.price view{
+  width: 100%;
+  font-size: 14px;
+}
+.parkingList-right{
+  width: 250rpx;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preOrder{
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background:#0f7dde;
+  text-align: center;
+  color: #fff;
+  border-radius: 10rpx;
+}

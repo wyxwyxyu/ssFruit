@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/infoList/infoList",
+    "pages/index/index",
+    "pages/infoPost/infoPost",
+    "pages/infoRecept/infoRecept",
+    "pages/commonDate/commonDate",
+    "pages/componentstest/componentstest",
+    "pages/chooseSupply/chooseSupply",
+    "pages/pay/pay",
+    "pages/orderChecked/orderChecked",   
+    "pages/orderPay/orderPay",            
+    "pages/home/home"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

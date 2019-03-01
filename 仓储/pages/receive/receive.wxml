@@ -1,0 +1,24 @@
+<view style="height:{{height}}px;">
+  <scroll-view scroll-y style="height: {{listheight}}px;" >
+    <view class='oid'>订单编号：{{orderId}}</view>
+    <view class='yl'>原料名称：{{yname}}</view>
+    <view class='yl'>重量：{{yweight}} 千克</view>
+    <view class='yl2'>请输入仓储位置：{{position}}</view>
+    <form bindsubmit='formSubmit'>
+    <view class='storage1'>
+      <text>货架号：</text>
+      <input name='storageId' placeholder='请输入货架号' class='storage'/>
+    </view>
+    <view class='storage1'>
+      <text>层数：</text>
+      <input name='storageRow' placeholder='请输入层数' class='storage' />
+    </view>
+    <view class='storage1'>
+      <text>列数：</text>
+      <input name='storageCol' placeholder='请输入列数' class='storage' />
+    </view>
+    <button class='btn' type='primary' formType='submit'>提交</button>
+    </form>
+    
+  </scroll-view>
+</view>

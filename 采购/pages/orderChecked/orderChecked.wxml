@@ -1,0 +1,12 @@
+<scroll-view scroll-y style="height: {{listheight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower">
+<view  wx:for='{{item}}' wx:key='{{item.demandId}}' class='content'>
+   <view>订单编号：{{item.orderNo}}</view>
+   <view>名称：{{item.materialName}}</view>
+   <view>重量：{{item.weight}}kg</view>
+  <button bindtap='passHnadle' data-id="{{item.orderNo}}">验收通过</button>
+
+</view>
+  <modal hidden="{{hiddenmodalput}}" title="请输入期望单价" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id="{{modalid}}">
+    <input type='digit' placeholder="请输入内容" bindblur='inputHandle' value="{{priceValue}}" auto-focus/>
+</modal>
+</scroll-view>

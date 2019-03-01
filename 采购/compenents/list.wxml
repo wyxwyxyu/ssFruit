@@ -1,0 +1,6 @@
+<scroll-view scroll-y style="height: {{listheight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower">
+<view  wx:for='{{item}}' wx:for-index='key' wx:for-item="value" class='content'  bindtap='clickHandle' data-id="{{item.id}}">
+   <slot></slot>
+</view>
+  
+</scroll-view>

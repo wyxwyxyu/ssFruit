@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/require/require",
+    "pages/record/record",
+    "pages/list/list",
+    "pages/receive/receive"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "牛牛生鲜-仓储端",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#228B22",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/require/require",
+        "text": "待验收"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "验收记录"
+      }
+    ]
+  }
+
+}

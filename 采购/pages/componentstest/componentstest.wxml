@@ -1,0 +1,5 @@
+<view>
+<list apiInfo='{{apiInfo}}' item='{{item}}'>
+  
+</list>
+</view>

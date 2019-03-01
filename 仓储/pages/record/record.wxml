@@ -1,0 +1,21 @@
+<view style="height:{{height}}px;">
+  <scroll-view scroll-y style="height: {{listheight}}px;" >
+    <view wx:for="{{item}}" wx:if='{{item != 0}}'>
+      <view class="content">
+        <view>
+          <view>订单编号:{{oid}}</view>
+          <view class="ys">
+            <text>原料名称：{{name}}</text>
+            <text>重量：{{weight}}千克</text>
+          </view>
+          <view>仓储位置：</view>
+          <view class="ys">
+            <text>货架号：{{sid}}</text>
+            <text>层数：{{srow}}</text>
+            <text>列数：{{scol}}</text>
+          </view>
+      </view>
+     </view> 
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,18 @@
+<scroll-view scroll-y style="height: {{listheight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower">
+<view  wx:for='{{item}}'  class='content'  data-quoteId="{{item.quoteId}}">
+   <view>名称：{{item.name}}</view>
+   <view>联系电话：{{item.phone}}</view>
+   <view>地址：{{item.address}}</view>
+   <view>所报单价：{{item.quotePrice}}</view>
+   <button bindtap='chooseHandle' data-quoteId='{{item.quoteId}}'>选择该供应商</button>
+
+</view>
+<modal hidden="{{hiddenmodalput}}" title="是否选择该供应商" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id="{{modalid}}">
+  <!-- <view wx:if="{{pay}}">
+    <input type='text'placeholder="请输入支付方式" bindblur='wayHandle' auto-focus/>
+    <input type='text'placeholder="请输入支付金额" bindblur='moneyHandle' auto-focus/>
+    <button bindtap='payConfirm'>确定</button>
+  </view> -->
+</modal>
+  
+</scroll-view>

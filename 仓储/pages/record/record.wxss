@@ -1,0 +1,66 @@
+page {
+  background: white;
+  font-size: 26rpx;
+}
+
+
+.none-data {
+  width: 100%;
+  height: 500rpx;
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.none-data wx-image {
+  width: 250rpx;
+  height: 200rpx;
+}
+
+.none-data wx-text {
+  color: gray;
+  display: block;
+  margin-top: 20rpx;
+}
+
+.touch-move-active .content, .touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.touch-item {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  height: 160 rpx;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  width: 100%;
+  padding: 10px;
+  line-height: 22px;
+  margin-right: 0;
+  -webkit-transition: all 4s;
+  transition: all 4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+  font-size:30 rpx;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.ys{
+  width: 100%;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+}

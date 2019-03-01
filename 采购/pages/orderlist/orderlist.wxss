@@ -1,0 +1,17 @@
+.box {
+  border: 1rpx lightgray solid;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  padding: 2rpx;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 55rpx;
+}
+
+.word {
+  color: black;
+  font-size: 35rpx;
+}

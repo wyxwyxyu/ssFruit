@@ -1,0 +1,10 @@
+<scroll-view scroll-y style="height: {{listheight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower">
+<view  wx:for='{{item}}' class='content'  bindtap='searchSupply' data-id='{{item.demandId}}'>
+   <view>名称：{{item.materialName}}</view>
+   <view>重量：{{item.weight}} </view>
+   <view>期望价格：{{item.expectPrice}} 元/kg</view>
+   <view style='color:blue'>点击查看接单供应商</view>
+   <!-- <view>供货时间：{{item.date}}</view> -->
+</view>
+  
+</scroll-view>
