@@ -1,4 +1,4 @@
-const ApiRootUrl = 'http://192.168.1.103:8080/'; 
+const ApiRootUrl = 'http://192.168.1.103:8081/'; 
 
 module.exports = {
   Demand: ApiRootUrl + 'demand/releaseDemand.do', //发布采购需求
@@ -8,8 +8,9 @@ module.exports = {
   SelectOrderByStatus: ApiRootUrl + 'purchaseOrder/selectPurchaseOrdersByStatus.do',//根据验收状态查询采购订单
   SelectOrderByPay: ApiRootUrl +'purchaseOrder / selectPurchaseOrdersByFinalMoneyType.do',//根据尾款状态查询采购订单  
   OrderCreate: ApiRootUrl +'purchaseOrder / generatePurchaseOrder.do ',//生成采购订单
-  OrderChecked: ApiRootUrl + '/purchaseOrder/check.do',  // 验收采购订单
-  OrderPay: ApiRootUrl+'',
+  OrderChecked: ApiRootUrl + 'purchaseOrder/check.do',  // 验收采购订单
+  AddFinalMoneypost: ApiRootUrl +'purchaseOrder/addFinalMoney.do',//添加尾款信息
+
 
   IndexUrl: ApiRootUrl + 'index/index', //首页数据接口
   CatalogList: ApiRootUrl + 'catalog/index',  //分类目录全部分类数据接口

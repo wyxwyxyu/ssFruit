@@ -1,4 +1,6 @@
-
+.nav{
+  z-index:20
+}
 .int{
   height:80rpx;
   line-height:80rpx;
@@ -40,4 +42,18 @@
   margin:40rpx auto;
   background: #0f7dde;
   color:#fff;
+}
+.wmp{
+  width:90%;
+  display: flex;
+  justify-content:space-between;
+  margin:0 auto;
+}
+.temp1{
+  position: absolute;
+  z-index: 50;
+  width:100%;
+  max-height: 450rpx;
+  text-align: center;
+  opacity: 1;
 }

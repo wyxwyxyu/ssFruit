@@ -1,16 +1,19 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/infoList/infoList",
+    "pages/infoPost/postList/postList",
     "pages/index/index",
-    "pages/infoPost/infoPost",
+    "pages/infoPost/infoPost",      
     "pages/infoRecept/infoRecept",
     "pages/commonDate/commonDate",
     "pages/componentstest/componentstest",
     "pages/chooseSupply/chooseSupply",
     "pages/pay/pay",
-    "pages/orderChecked/orderChecked",   
-    "pages/orderPay/orderPay",            
-    "pages/home/home"
+    "pages/orderChecked/orderChecked",
+    "pages/orderChecked/addFinalMoney/addFinalMoney",
+    "pages/orderChecked/refuse/refuse"           
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

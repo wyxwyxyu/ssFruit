@@ -1,22 +1,13 @@
-var app = getApp();
+var util = require('../../utils/util.js');
+var api = require('../../config/api.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    height: '',
-    listheight: '',
-    buttonheight: '',
-    startX: 0,
-    startY: 0,
-    isTouchMove: false,
-    payflag: true,
-    pageNumber: 1,  //当前页数
-    pageSize: 4,  //每页显示几条数据
-    item: [
-
-    ],  //要显示的数据
+    item: [],  //要显示的数据
   },
 
   /**
@@ -25,20 +16,18 @@ Page({
   onLoad: function (options) {
     var that = this;
     //调用加载数据的方法
-    wx.request({
-      url: 'http://192.168.1.101:8080/storage/' + 'selectAllOrderByStatus.do?checkStatus=' + 1,
-      method: "POST",
-      data: {
-      },
-      header: {
-        "content-type": "application/json",
-      },
-      success: function (res) {
-        console.log(res)
-        that.setData({
-          item:res.data.data
-        })
-      }
+    that.loadData()
+       
+     
+  },
+  loadData: function () {
+    var that = this;
+    util.request(api.SelectOrderByStatus + '?checkStatus=' + 1).then(function (res) {
+      wx.hideLoading();
+      var array = res.data.data
+      that.setData({
+        item: array
+      })
     })
   },
   click: function (res) {

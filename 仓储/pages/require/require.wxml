@@ -8,7 +8,7 @@
             <text>重量：{{item.weight}}千克</text>
           </view>
           <view class="left-btm">
-            <button class="right-btn" type='primary' size='mini' data-id="{{item.orderNo}}" data-name="{{item.materialName}}" data-weight="{{item.weight}}" bindtap="click">验收</button>
+            <button class="right-btn" type='primary' size='mini' data-id="{{item.orderNo}}" data-name="{{item.materialName}}" data-weight="{{item.weight}}" bindtap="click">记录仓储位置</button>
           </view>
       </view>
     </view></view>

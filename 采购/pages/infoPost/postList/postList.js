@@ -1,48 +1,20 @@
-var util = require('../../utils/util.js');
-var api = require('../../config/api.js');
-var common = require('../../utils/common.js');
+// pages/infoPost/postList/postList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    item: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadData();
-    this.loadOtherData();
+
   },
-  loadData: function () {
-    var that = this;
-    util.request(api.DemandRecept + '?status=' + 1).then(function (res) {
-      var array = res.data.data
-      that.setData({
-        item: array
-      })
-    })
-  },
-  loadOtherData:function(){
-    var that = this;
-    util.request(api.DemandRecept + '?status=' + 0).then(function (res) {
-      var array = res.data.data
-      that.setData({
-        item2: array
-      })
-    })
-  },
-  searchSupply:function(e){
-    var id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '../chooseSupply/chooseSupply?id='+id,
-    })
-    
-     
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -3,14 +3,8 @@
    <view>名称：{{item.materialName}}</view>
    <view>重量：{{item.weight}} </view>
    <view>期望价格：{{item.expectPrice}} 元/kg</view>
-   <view style='color:green'>点击查看接单供应商</view>
-</view>
-<view  wx:for='{{item2}}' class='content'   data-id='{{item.demandId}}'>
-   <view>名称：{{item.materialName}}</view>
-   <view>重量：{{item.weight}} </view>
-   <view>期望价格：{{item.expectPrice}} 元/kg</view>
-   <view style='color:blue'>未有供应商接单</view>
-
+   <view style='color:blue'>点击查看接单供应商</view>
+   <!-- <view>供货时间：{{item.date}}</view> -->
 </view>
   
 </scroll-view>

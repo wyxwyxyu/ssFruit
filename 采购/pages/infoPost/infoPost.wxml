@@ -1,37 +1,58 @@
-<view wx:for="{{list2}}" wx:key="unique"  style="margin-top:50rpx">
-   <view class="manager" >
+<view wx:for="{{list2}}" wx:key="unique" style="margin-top:50rpx">
+  <view class="manager">
     <view class="text">原料名称:</view>
     <view class="section">
-      <input placeholder='请填写采购原料名称' class="int" bindblur='nameHandle' data-id="{{index}}" ></input>
+      <input placeholder='请填写采购原料名称' class="int" bindblur='nameHandle' data-id="{{index}}"></input>
     </view>
   </view>
-  <view class="manager" >
+  <view class="manager">
     <view class="text">重量(KG):</view>
     <view class="section">
-      <input placeholder='请填写采购重量' class="int" bindblur='weightHandle' data-id="{{index}}"></input>
+      <input type='digit' placeholder='请填写采购重量' class="int" bindblur='weightHandle' data-id="{{index}}"></input>
     </view>
   </view>
-  <view class="manager" >
+  <view class="manager">
     <view class="text">期望单价:</view>
     <view class="section">
-      <input placeholder='请填写期望单价' class="int" bindblur='priceHandle' data-id="{{index}}"></input>
+      <input type='digit' placeholder='请填写期望单价' class="int" bindblur='priceHandle' data-id="{{index}}"></input>
     </view>
   </view>
 
 
-  <view class="manager" >
+  <view class="manager">
     <view class="text">供货时间:</view>
     <view class="section">
-      <input placeholder='请选择供货时间' class="int" bindblur='timeHandle' data-id="{{index}}"></input>
+      <input placeholder='请选择供货时间' value="{{list2[index].showTime}}" disabled="true" class="int" bindtap='timeHandle' data-id="{{index}}"></input>
     </view>
   </view>
-  <button bindtap='cancle' data-id="{{index}}">删除</button>
-</view>
-<button bindtap='add'>add</button>
-
-  <button class='button' bindtap='submit'>发布需求</button>
-
-
-
   
- 
+  
+</view>
+<view wx:if="{{dateStatus}}" class="temp1">
+    <picker-view style="width: 100%; height: 530rpx; opacity:1" value="{{value}}" bindchange="bindChange">
+      <picker-view-column style="line-height:34px;">
+        <view wx:for="{{years}}">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column style="line-height:34px;">
+        <view wx:for="{{months}}">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column style="line-height:34px;">
+        <view wx:for="{{days}}">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <view style="width:100%;background:white;">
+      <view class="wmp">
+        <text style='color:#666;text-align:left' bindtap="list" data-id="{{index}}">取消</text>
+        <text style='color:green;text-align:right' bindtap="listConfirm" data-id="{{index}}">确定</text>
+      </view>
+    </view>
+
+  </view>
+
+<view wx:if="{{isDateChoice}}">
+ <button bindtap='cancle' data-id="{{index}}">删除</button>
+    
+    <button bindtap='add'>add</button>
+
+    <button class='button' bindtap='submit'>发布需求</button>
+</view>

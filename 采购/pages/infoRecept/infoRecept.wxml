@@ -2,7 +2,7 @@
 <view  wx:for='{{item}}' wx:key='{{item.demandId}}' class='content'>
    <view>名称：{{item.materialName}}</view>
    <view>重量：{{item.weight}} </view>
-   <view>期望价格：{{item.price}} 元/kg</view>
+   <view>期望价格：{{item.expectPrice}} 元/kg</view>
    <view>供货时间：{{item.endTime}}</view>
   <button bindtap='buttonHnadle' data-id="{{item.demandId}}">接单</button>
 

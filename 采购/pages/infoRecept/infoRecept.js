@@ -36,6 +36,7 @@ Page({
   loadData:function(){
     var that=this;
     util.request(api.DemandRecept + '?status=' + 0).then(function (res) {
+      console.log(res)
       var array = res.data.data
       that.setData({
         item: array
@@ -57,14 +58,17 @@ Page({
     var id = e.currentTarget.dataset.id     //拿到接单对象的采购订单id
     if(price!=''){     
       util.request(api.ReleaseQuote + '?demandId=' + id + '&quotePrice=' + price + '&providerId=' +'6e75386393cd417d9474ef93fc30f4cf').then(function (res) {
-        console.log(res)
+        wx.showToast({
+          title: '报价成功',
+        })
         that.setData({
           hiddenmodalput: true,
           priceValue:''
         })
+        that.loadData();
       })
 
-      that.loadData();
+      
 
     }else{
         common.modalBox();

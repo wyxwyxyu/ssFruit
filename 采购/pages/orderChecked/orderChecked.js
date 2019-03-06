@@ -1,6 +1,6 @@
 var util = require('../../utils/util.js');
 var api = require('../../config/api.js');
-var common = require('../../utils/common.js');
+
 Page({
 
   /**
@@ -11,7 +11,8 @@ Page({
     hiddenmodalput: true,
     modalid: '',
     listheight: '',//用于设置页面高度
-    item: []
+    item: [],
+    show1:1
   },
 
   /**
@@ -36,6 +37,26 @@ Page({
   loadData: function () {
     var that = this;
     util.request(api.SelectOrderByStatus + '?checkStatus=' + 0).then(function (res) {
+      
+      var array = res.data.data
+      that.setData({
+        item: array
+      })
+    })
+  },
+  loadData2:function(){
+    var that = this;
+    util.request(api.SelectOrderByPay + '?finalMoneyType=' + 0).then(function (res) {
+     
+      var array = res.data.data
+      that.setData({
+        item: array
+      })
+    })
+  },
+  loadData3: function () {
+    var that = this;
+    util.request(api.SelectOrderByStatus + '?checkStatus=' + 2).then(function (res) {
       console.log(res)
       var array = res.data.data
       that.setData({
@@ -43,8 +64,24 @@ Page({
       })
     })
   },
-
-  
+  showOrderCheck: function () {
+    this.setData({
+      show1:1
+    })
+    this.loadData()
+  },
+  showOrderFinalPay: function () {
+    this.setData({
+      show1: 2
+    })
+    this.loadData2()
+  },
+  refuseOrder: function () {
+    this.setData({
+      show1: 3
+    })
+    this.loadData3()
+  },
   passHnadle: function (e) {
     var that=this;
     var id = e.currentTarget.dataset.id
@@ -54,8 +91,22 @@ Page({
       })
       that.loadData();
     })
-
-
+  },
+  refuseHnadle: function (e) {
+    var that = this;
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: './refuse/refuse?id='+id,
+    })
+    
+  },
+  payHandle: function (e){
+    var that = this;
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: './addFinalMoney/addFinalMoney?id='+id,
+    })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -68,7 +119,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if(this.data.show==1){
+      this.loadData();
+    } else if (this.data.show == 2){
+      this.loadData2();
+    } else if (this.data.show == 3){
+      this.loadData3();
+    }
   },
 
   /**

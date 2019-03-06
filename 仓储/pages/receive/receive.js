@@ -1,4 +1,5 @@
-var app = getApp();
+var util = require('../../utils/util.js');
+var api = require('../../config/api.js');
 Page({
 
   /**
@@ -44,21 +45,16 @@ Page({
       },2000)
 
     }else{
-      wx.request({
-        url: 'http://192.168.1.101:8080/storage/storage.do',
-        method:"POST",
-        header: { "content-type": 'application/x-www-form-urlencoded'},
-        data:{
-          purchaseOrderNo: this.data.orderId,
-          shelfNo: storageId,
-          row: storageRow,
-          column: storageCol
-        },
-        success: function (res) {
-          console.log(res)
-        }
-
+      util.request(api.Storage + '?purchaseOrderNo=' + this.data.orderId + '&shelfNo=' + storageId + '&row=' + storageRow + '&column=' + storageCol).then(function (res) {
+        wx.hideLoading();
+        util.showSuccess();
+        setTimeout(function () {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 1500)
       })
+     
     }
   },
 

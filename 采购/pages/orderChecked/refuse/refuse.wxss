@@ -1,0 +1,7 @@
+.textarea {
+  font-size: 28rpx;
+  margin: 10%;
+  background-color: lightgray;
+  width: 80%;
+  height: 100px;
+}

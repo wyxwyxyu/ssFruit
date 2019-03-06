@@ -15,7 +15,12 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+function showInfoMiss(){
+  wx.showToast({
+    title: '请补全信息',
+    icon:'none'
+  })
+}
 
 /**
  * 封封微信的的request
@@ -34,8 +39,10 @@ function request(url, data = {}, method = "POST") {
         wx.hideLoading();
         resolve(data)
         if (data.data.status ==1){
+          var msg=data.data.msg
           wx.showToast({
-            title: '未登录',
+            title: msg,
+            icon:'none',
             duration: 1000
           })
         }
@@ -91,5 +98,6 @@ function request(url, data = {}, method = "POST") {
 
 module.exports = {
   formatTime: formatTime,
-  request:request
+  request:request,
+  showInfoMiss: showInfoMiss,
 }

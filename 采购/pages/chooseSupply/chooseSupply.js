@@ -12,7 +12,8 @@ Page({
     modalid:'',
     pay:false,
     way:'',
-    money:''
+    money:'',
+    isButtonShow:false
   },
 
   /**
@@ -48,19 +49,15 @@ Page({
       var array = res.data.data
       console.log(res)
       that.setData({
+        isButtonShow:true,
         hiddenmodalput: true
       })
-      wx.redirectTo({
-        url: '../infoList/infoList',
+      wx.showToast({
+        title: '已生成采购订单',
+        duration:2000
       })
     })
   },
-  // wayHandle: function (e) {
-  //   this.data.way = e.detail.value;
-  // },
-  //   moneyHandle: function (e) {
-  //     this.data.money = e.detail.value;
-  // },
   chooseHandle:function(e){
     var that= this;
     var id = e.currentTarget.dataset.quoteid
@@ -69,23 +66,33 @@ Page({
       modalid: id
     })
   },
-  
-  payConfirm:function(){
-    var way=this.data.way;
-    var money=this.data.money;
-    if (way != undefined && money != undefined && way != ''&& money != ''){
-      this.setData({
-        hiddenmodalput: true,
-      })
-      console.log("success")
-      wx.redirectTo({
-        url: '../infoList/infoList',
-      })
-    }else(
-      console.log("failed")
-    )
-    
+  nav1:function(){
+    wx.reLaunch({
+      url: '../home/home',
+    })
   },
+  nav2: function () { 
+    wx.reLaunch({
+      url: '../infoList/infoList',
+    })
+  },
+  
+  // payConfirm:function(){
+  //   var way=this.data.way;
+  //   var money=this.data.money;
+  //   if (way != undefined && money != undefined && way != ''&& money != ''){
+  //     this.setData({
+  //       hiddenmodalput: true,
+  //     })
+  //     console.log("success")
+  //     wx.redirectTo({
+  //       url: '../infoList/infoList',
+  //     })
+  //   }else(
+  //     console.log("failed")
+  //   )
+    
+  // },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

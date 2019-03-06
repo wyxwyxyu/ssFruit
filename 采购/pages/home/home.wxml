@@ -1,6 +1,5 @@
 <button bindtap='submitInfo'>发布采购需求</button>
-<button bindtap='chooseSupply'>查看接单供应商</button>
+<button bindtap='chooseSupply'>查看采购需求</button>
 <button bindtap='infoRecept'>供应商接单</button>
-<button bindtap='orderChecked'>采购订单验收</button>
-<button bindtap='orderPay'>采购订单结算</button>
+<button bindtap='orderChecked'>查看采购订单</button>
 <!-- <button bindtap='infoRecept'>查看历史需求</button> -->

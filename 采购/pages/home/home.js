@@ -16,12 +16,17 @@ Page({
   },
   submitInfo:function(){
     wx.navigateTo({
-      url: '../infoPost/infoPost',
+      url: '../infoPost/infoPost',//发布需求
+    })
+  },
+  submitList: function () {
+    wx.navigateTo({
+      url: '../infoPost/postList/postList',//查看发布需求
     })
   },
   chooseSupply: function () {
     wx.navigateTo({
-      url: '../infoList/infoList',
+      url: '../infoList/infoList',//查看接单供应商
     })
   },
   infoRecept: function () {
@@ -34,11 +39,7 @@ Page({
       url: '../orderChecked/orderChecked',
     })
   },
-  orderPay: function () {
-    wx.navigateTo({
-      url: '../orderPay/orderPay',
-    })
-  },
+ 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,0 +1,4 @@
+<view>请输入拒绝验收原因
+<textarea class="textarea" bindinput='noteHandle'></textarea>
+</view>
+<button bindtap='submit'>提交</button>

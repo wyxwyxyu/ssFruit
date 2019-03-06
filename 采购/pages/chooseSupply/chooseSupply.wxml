@@ -3,7 +3,7 @@
    <view>名称：{{item.name}}</view>
    <view>联系电话：{{item.phone}}</view>
    <view>地址：{{item.address}}</view>
-   <view>所报单价：{{item.quotePrice}}</view>
+   <view>所报单价：{{item.quotePrice}}元/kg</view>
    <button bindtap='chooseHandle' data-quoteId='{{item.quoteId}}'>选择该供应商</button>
 
 </view>
@@ -16,3 +16,5 @@
 </modal>
   
 </scroll-view>
+<view wx:if="{{isButtonShow}}" bindtap='nav1'>返回首页</view>
+<!-- <view wx:if="{{isButtonShow}}" bindtap='nav2'>查看采购需求</view> -->

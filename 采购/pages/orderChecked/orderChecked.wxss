@@ -1,6 +1,11 @@
-
+.top{
+  height:15rpx;
+  width:100%;
+  margin-left: 100rpx;
+  margin-top:5rpx;
+}
 .content {
-  height: 300rpx;
+  height: 400rpx;
   padding-top: 20rpx;
   padding-left: 10rpx;
   border-bottom: 1rpx solid #cfcfcf;
@@ -9,4 +14,15 @@
   line-height: 22px;
   margin-right: 0;
   font-size:30rpx;
+}
+.spec-cell{
+  border: 1rpx #969696 solid;
+  padding: 6rpx 10rpx;
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx;
+}
+.tapd-spec-cell{
+  background-color: #FF4991;
+  color: #fff;
 }
