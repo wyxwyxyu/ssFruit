@@ -1,4 +1,4 @@
 <button bindtap='submitInfo'>记录仓储位置</button>
 <button bindtap='chooseSupply'>入库</button>
-<button bindtap='infoRecept'>出库</button>
+<button bindtap='infoRecept'>出库拣货</button>
 

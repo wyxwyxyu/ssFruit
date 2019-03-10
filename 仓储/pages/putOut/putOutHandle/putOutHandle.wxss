@@ -1,1 +1,16 @@
-/* pages/putOut/putOutHandle/putOutHandle.wxss */
+.content {
+  height: 160 rpx;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  width: 100%;
+  padding: 10px;
+  line-height: 22px;
+  margin-right: 0;
+  -webkit-transition: all 4s;
+  transition: all 4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+  font-size:30 rpx;
+}

@@ -1,20 +1,47 @@
-// pages/putIn/putIn.js
+var util = require('../../utils/util.js');
+var api = require('../../config/api.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    flag:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     //this.loadData();
+  },
+  // loadData: function () {
+  //   var that = this;
+  //   util.request(api.SelectOrderByStatus + '?checkStatus=' + 1).then(function (res) {
+  //     wx.hideLoading();
+  //     var array = res.data.data
+      
+  //     that.setData({
+  //       item: array
+  //     })
+  //   })
+  // },
+  searchHandle:function(e){
+    var searchContent=e.detail.value
+    var that=this;
+    util.request(api.SearchProduct + '?productName=' + searchContent).then(function (res) {
+      wx.hideLoading();
+      if (res.data.status == 0) {
+        var array = res.data.data.list
+        console.log(res)
+        that.setData({
+          item: array,
+          flag: true
+        })
+      }
+    })
 
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

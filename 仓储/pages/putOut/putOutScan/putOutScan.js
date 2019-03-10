@@ -1,5 +1,5 @@
-var util = require('../../utils/util.js');
-var api = require('../../config/api.js');
+var util = require('../../../utils/util.js');
+var api = require('../../../config/api.js');
 Page({
 
   /**
@@ -13,25 +13,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadData();
-  },
-  loadData:function(){
-    var that=this;
-    util.request(api.SelectOrder + '?orderStatus=' + 1).then(function (res) {
-      wx.hideLoading();
-      if (res.data.status == 0) {
-        var array = res.data.data
+    console.log(options)
+    var id=options.id;
+    let scanid='';
+    wx.scanCode({
+      onlyFromCamera: false,
+      scanType: ['qrCode', 'barCode'],
+      success(res) {
         console.log(res)
-        that.setData({
-          orderList: array
+        scanid=res.result     //二维码解析值
+        wx.navigateBack({
+          
         })
       }
     })
+  },
 
-  },
-  clickPutOut:function(){
-   
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -43,7 +40,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**

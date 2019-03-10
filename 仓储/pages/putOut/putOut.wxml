@@ -1,2 +1,22 @@
-<!--pages/putOut/putOut.wxml-->
-<text>pages/putOut/putOut.wxml</text>
+<scroll-view scroll-y style="height: {{listheight}}px;">
+  <view wx:if='{{orderList.length>0}}'>
+    <navigator wx:for="{{orderList}}"  url="./putOutHandle/putOutHandle?orderNo={{item.orderNo}}">
+      <view class="content">
+        <view class="list-left">
+          <view>
+            <view>订单编号：{{item.orderNo}}</view>
+            <view>订单创建时间：{{item.createTime}}</view>
+          </view>
+          <view wx:for="{{orderList[index].orderItemVoList}}">
+            <view>
+              <text style='margin-right:20rpx;'>名称：{{item.productName}}</text>
+              <text style='margin-right:20rpx;'>规格：{{item.sepcification}}{{item.unit}}</text>
+              <text>数量：{{item.quantity}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:else="{{flag}}">暂无数据</view>
+</scroll-view>

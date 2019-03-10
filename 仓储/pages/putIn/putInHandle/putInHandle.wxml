@@ -1,2 +1,32 @@
-<!--pages/putIn/putInHandle/putInHandle.wxml-->
-<text>pages/putIn/putInHandle/putInHandle.wxml</text>
+<view>
+{{item.name}}
+</view>
+<view class="spec">
+  <view class="spec-tit">选择入库规格:</view>
+  <view class="spec-wrap">
+    <view class="spec-cell {{index===currentSpec?'tapd-spec-cell':''}}" data-index="{{index}}" wx:for="{{item.productDetailList}}" catchtap="selectspec">
+      {{item.sepification}}{{item.unit}}
+    </view>
+  </view>
+</view>
+<form bindsubmit='formSubmit'>
+<view class='storage1'>
+<text>入库数量：</text>
+<input class='storage' name='count' placeholder='请输入入库数量'></input></view>
+<view>请输入仓储位置：</view>
+ 
+    <view class='storage1'>
+      <text>货架号：</text>
+      <input name='storageId' placeholder='请输入货架号' class='storage'/>
+    </view>
+    <view class='storage1'>
+      <text>层数：</text>
+      <input name='storageRow' placeholder='请输入层数' class='storage' />
+    </view>
+    <view class='storage1'>
+      <text>列数：</text>
+      <input name='storageCol' placeholder='请输入列数' class='storage' />
+    </view>
+    <button class='btn' type='primary' formType='submit'>提交</button>
+  </form>
+<button></button>

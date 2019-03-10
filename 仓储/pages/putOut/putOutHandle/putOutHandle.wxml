@@ -1,2 +1,13 @@
-<!--pages/putOut/putOutHandle/putOutHandle.wxml-->
-<text>pages/putOut/putOutHandle/putOutHandle.wxml</text>
+
+    <!-- <navigator  url="../putOutScan/putOutScan" data-id="{{item.orderItemId}}"> -->
+      <view  wx:for="{{list}}" class="content">
+          <view>
+            <view>名称：{{item.productName}}</view>
+            <view>规格：{{item.sepcification}}{{item.unit}}</view>
+            <view>数量：{{item.quantity}}</view>
+            <button bindtap='putout' data-id="{{item.orderItemId}}">扫一扫出库</button>
+             <button bindtap='putoutFinish' data-id="{{item.orderItemId}}">拣货结束</button>
+          </view>
+      </view>
+    <!-- </navigator> -->
+
