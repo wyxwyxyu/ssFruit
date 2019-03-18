@@ -1,13 +1,24 @@
 
     <!-- <navigator  url="../putOutScan/putOutScan" data-id="{{item.orderItemId}}"> -->
-      <view  wx:for="{{list}}" class="content">
-          <view>
+
+          <view wx:for="{{list}}" class="content" data-index="{{index}}">
+          <view wx-if="{{item.pickStatus==0}}">
             <view>名称：{{item.productName}}</view>
             <view>规格：{{item.sepcification}}{{item.unit}}</view>
             <view>数量：{{item.quantity}}</view>
-            <button bindtap='putout' data-id="{{item.orderItemId}}">扫一扫出库</button>
-             <button bindtap='putoutFinish' data-id="{{item.orderItemId}}">拣货结束</button>
+            <view>当前已拣货：{{item.count}}</view>
+            <button bindtap='putout' data-id="{{item.orderItemId}}" data-index="{{index}}">扫一扫出库</button>
+             <button bindtap='putoutFinish' data-id="{{item.orderItemId}}" data-index="{{index}}">当前商品已拣完</button>
           </view>
-      </view>
+          
+          <view wx:elif="{{item.pickStatus==1}}">
+          <view>名称：{{item.productName}}</view>
+            <view>规格：{{item.sepcification}}{{item.unit}}</view>
+            <view>数量：{{item.quantity}}</view>
+            <view style='color:green;'>已分拣完成</view>
+          </view>
+          </view>
+         <button class='buttonBottom' bindtap='finishpicking'>订单拣货完成</button>
+
     <!-- </navigator> -->
 

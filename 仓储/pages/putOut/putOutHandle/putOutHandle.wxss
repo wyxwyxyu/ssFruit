@@ -14,3 +14,10 @@
   margin-left: -90px;
   font-size:30 rpx;
 }
+.buttonBottom{
+  position: fixed;
+  bottom:30rpx;
+  width:100%;
+      color: #fff;
+  background: #14a1fd;
+}
