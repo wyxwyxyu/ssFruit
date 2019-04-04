@@ -1,0 +1,42 @@
+<view class='background'>
+  <view class='box' wx:for="{{one}}" wx:for-item='record'>
+    <view wx:if="{{record.status==0}}">
+      <view>
+        <view class='row'>
+          <view class='left'>商家名称：{{record.shopName}}</view>
+          <view class='right'>配送顺序：{{record.sendSequence}}</view>
+        </view>
+        <view class='row'>
+          <view style='width:50%' class='left'>收货人：{{record.receiverName}}</view>
+          <view style='width:50%' class='right'>电话：{{record.receiverPhone}}</view>
+        </view>
+        <view style='margin-left: 15rpx'>地址：{{record.address}}</view>
+      </view>
+
+      <view wx:for="{{record.distributionOrderVoList}}" class='ordercut' style='font-size:30rpx'>
+        <view wx-if="{{item.status==0}}">
+          <view class='row'>
+            <view style='width:80%' class='left'>订单编号：{{item.orderNo}}</view>
+            <view style='width:20%' class='right'>{{item.distributeType}}</view>
+          </view>
+
+          <view wx:for="{{item.distributionOrderItemVoList}}">
+            <view class='row'>
+              <view class='left' style='width:43%'>名称：{{item.productName}}</view>
+              <view style='width:26%'>数量：{{item.quantity}}</view>
+              <view style='width:31%'>规格：{{item.sepification}}kg</view>
+            </view>
+          </view>
+          <view style='display: flex;flex-direction: row-reverse;'>
+            <view class='button' bindtap='click' data-orderNo='{{item.orderNo}}' data-itemInfoId='{{item.itemInfoId}}'>
+              确认
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>

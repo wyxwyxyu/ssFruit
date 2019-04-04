@@ -1,0 +1,43 @@
+.background {
+  background-color: rgba(209, 198, 198, 0.815);
+  padding: 20rpx;
+}
+
+.box {
+  background-color:white;
+  border-radius: 15rpx;
+  margin-top: 10rpx;
+  font-size: 35rpx;
+}
+.ordercut{
+  border-top-style: dashed;
+  border-top-color: gray;
+  border-top-width: 1rpx;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 60%;
+  text-align: left;
+  margin-left: 15rpx;
+}
+
+.right {
+width: 40%;
+text-align: right;
+margin-right: 15rpx;
+}
+
+.button {
+  width: 15%;
+  background-color: rgb(112, 191, 211);
+  text-align: center;
+  border-radius: 15rpx;
+  margin-bottom: 5rpx;
+  margin-right: 15rpx;
+  margin-top: 5rpx;
+}

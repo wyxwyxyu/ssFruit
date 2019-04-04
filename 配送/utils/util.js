@@ -15,13 +15,18 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-function showInfoMiss(){
+
+function showInfoMiss() {
   wx.showToast({
     title: '请补全信息',
-    icon:'none'
+    icon: 'none'
   })
 }
-
+function showSuccess() {
+  wx.showToast({
+    title: '提交成功'
+  })
+}
 /**
  * 封封微信的的request
  */
@@ -36,14 +41,15 @@ function request(url, data = {}, method = "POST") {
         //'X-Nideshop-Token': wx.getStorageSync('token')
       },
       success: (data) => {
-        wx.hideLoading();
+        wx.showLoading({
+          title: '加载中',
+        })
         resolve(data)
-        if (data.data.status ==1){
-          var msg=data.data.msg
+        if (data.data.status == 1) {
+          var msg = data.data.msg
           wx.showToast({
             title: msg,
-            icon:'none',
-            duration: 1000
+            icon: 'none'
           })
         }
         // if (data.data.status == -1) {
@@ -98,6 +104,7 @@ function request(url, data = {}, method = "POST") {
 
 module.exports = {
   formatTime: formatTime,
-  request:request,
+  request: request,
   showInfoMiss: showInfoMiss,
+  showSuccess: showSuccess,
 }

@@ -1,4 +1,4 @@
-const ApiRootUrl = 'http://192.168.1.105:8080/'; 
+const ApiRootUrl = 'http://192.168.1.103:8080/'; 
 
 module.exports = {
   Demand: ApiRootUrl + 'demand/releaseDemand.do', //发布采购需求
@@ -70,4 +70,8 @@ module.exports = {
 
   FootprintList: ApiRootUrl + 'footprint/list',  //足迹列表
   FootprintDelete: ApiRootUrl + 'footprint/delete',  //删除足迹
+
+  DriverSelectDistributeByStatus: ApiRootUrl +'distribute/driverSelectDistributeByStatus.do',//司机获取配送单Id
+  GenerateDistributeDoc: ApiRootUrl +'distribute/generateDistributeDoc.do',//司机获取配送单详情
+  ConfirmReceipt: ApiRootUrl + 'driver/confirmReceipt.do',//司机确认收货
 };

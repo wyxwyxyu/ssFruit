@@ -1,1 +1,9 @@
+<view class='background'>
 
+  <view wx:for="{{distribution}}" class='box'>
+    <view bindtap='click' data-distributionId='{{item.distributionId}}'>
+      <view>送货地点数量：{{item.destinationCount}}个</view>
+    </view>
+  </view>
+  
+</view>

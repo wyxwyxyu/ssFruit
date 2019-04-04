@@ -1,4 +1,4 @@
-const ApiRootUrl = 'http://192.168.1.105:8080/'; 
+const ApiRootUrl = 'http://192.168.1.103:8080/'; 
 
 module.exports = {
   Demand: ApiRootUrl + 'demand/releaseDemand.do', //发布采购需求
