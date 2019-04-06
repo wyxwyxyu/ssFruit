@@ -22,7 +22,8 @@ Page({
   },
   loadData: function () {
     var that = this;
-    util.request(api.SelectOrderByStatus + '?checkStatus=' + 1).then(function (res) {
+    util.request(api.GetStorage).then(function (res) {
+      console.log(res)
       wx.hideLoading();
       var array = res.data.data
       that.setData({

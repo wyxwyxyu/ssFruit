@@ -10,8 +10,6 @@ module.exports = {
   OrderCreate: ApiRootUrl +'purchaseOrder / generatePurchaseOrder.do ',//生成采购订单
   OrderChecked: ApiRootUrl + 'purchaseOrder/check.do',  // 验收采购订单
   Storage: ApiRootUrl +'storage/storage.do',//记录仓储位置
-
-
   SearchProduct: ApiRootUrl + 'product/searchProduct.do' ,//搜索商品
   GetProductDetail: ApiRootUrl + 'product/getProductDetail.do',   //获取商品详情
   PutIn: ApiRootUrl + 'storage/putIn.do',   //入库
@@ -21,5 +19,6 @@ module.exports = {
   PutOutAfterScan: ApiRootUrl +'standard/storingStandardMaterialByOrder.do',//根据用户订单分拣出库
   FinishPicking: ApiRootUrl + 'order/finishPicking.do',//完成拣货
   CreateStandardMaterial: ApiRootUrl + 'standard/createStandardMaterial.do',//创建标准包装
-  GetWeight: ApiRootUrl + 'standard/getWeight.do'//获取重量
+  GetWeight: ApiRootUrl + 'standard/getWeight.do',//获取重量
+  GetStorage: ApiRootUrl + 'standard/getStock.do',//获取库存
 }; 

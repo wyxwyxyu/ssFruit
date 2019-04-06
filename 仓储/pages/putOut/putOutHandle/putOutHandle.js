@@ -44,7 +44,7 @@ currentSelect:0
     let scanid = '';
     if (that.data.currentSelect != itemIndex) {
       wx.showToast({
-        title: '请完成当前商品拣货',
+        title: '请完成上一件商品拣货',
         icon: 'none'
       })
       return;

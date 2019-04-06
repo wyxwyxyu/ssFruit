@@ -4,12 +4,11 @@
       <view class="content">
         <view class="list-left">
           <view class="left-top">
-            <text>原料名称：{{item.materialName}}</text>
-            <text>重量：{{item.weight}}千克</text>
+            <text>名称：{{item.name}}</text>
+            <text>规格：{{item.spec}}{{item.unit}}</text>
           </view>
-          <view class="left-btm">
-            <button class="right-btn" type='primary' size='mini' data-id="{{item.orderNo}}" data-name="{{item.materialName}}" data-weight="{{item.weight}}" bindtap="click">记录仓储位置</button>
-          </view>
+          <view>库存：{{item.stock}}</view>
+          
       </view>
     </view></view>
   </scroll-view>

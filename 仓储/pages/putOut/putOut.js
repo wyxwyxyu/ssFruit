@@ -17,7 +17,8 @@ Page({
   },
   loadData:function(){
     var that=this;
-    util.request(api.SelectOrder + '?orderStatus=' + 1).then(function (res) {
+    util.request(api.SelectOrder + "?orderStatus=" + 1).then(function (res) {
+      console.log(res)
       wx.hideLoading();
       if (res.data.status == 0) {
         var array = res.data.data

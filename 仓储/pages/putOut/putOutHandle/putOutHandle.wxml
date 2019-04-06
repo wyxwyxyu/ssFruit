@@ -8,7 +8,7 @@
             <view>数量：{{item.quantity}}</view>
             <view>当前已拣货：{{item.count}}</view>
             <button bindtap='putout' data-id="{{item.orderItemId}}" data-index="{{index}}">扫一扫出库</button>
-             <button bindtap='putoutFinish' data-id="{{item.orderItemId}}" data-index="{{index}}">当前商品已拣完</button>
+             <button bindtap='putoutFinish' data-id="{{item.orderItemId}}" data-index="{{index}}">确认当前商品拣完</button>
           </view>
           
           <view wx:elif="{{item.pickStatus==1}}">
