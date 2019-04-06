@@ -10,6 +10,7 @@
    <view>重量：{{item.weight}} </view>
    <view>期望价格：{{item.expectPrice}} 元/kg</view>
    <view style='color:blue'>未有供应商接单</view>
+   <button>删除采购需求</button>
 
 </view>
   

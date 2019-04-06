@@ -1,0 +1,22 @@
+<view>
+{{item.name}}
+</view>
+<view class="spec">
+  <view class="spec-tit">选择入库规格:</view>
+  <view class="spec-wrap">
+    <view class="spec-cell {{index===currentSpec?'tapd-spec-cell':''}}" data-index="{{index}}" wx:for="{{item.productDetailList}}" catchtap="selectspec">
+      {{item.sepification}}{{item.unit}}
+    </view>
+  </view>
+</view>
+<view class='num'>
+<text>采购订单号：</text>
+<input  value='{{orderNo}}' disabled='true'></input>
+</view>
+<view class='num'>
+<text>重量：</text>
+<input  value='{{weight}}' disabled='true'></input>
+</view>
+<button class='btn' type='primary' bindtap='getWeight'>获取重量</button>
+<button class='btn' type='primary' bindtap='submit'>提交并打印</button>
+

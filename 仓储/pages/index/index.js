@@ -19,6 +19,21 @@ Page({
       url: '../require/require',//记录仓储位置
     })
   },
+  standardMaterial: function() {
+    wx.navigateTo({
+      url: '../standard-material/standard-material',//分拣
+    })
+  },
+  getStorage:function(){
+    wx.navigateTo({
+      url: '../storage/storage',//查看库存
+    })
+  },
+  getInfo: function () {
+    wx.navigateTo({
+      url: '../require/list/list',//查看已仓储订单
+    })
+  },
   chooseSupply: function () {
     wx.navigateTo({
       url: '../putIn/putIn',//入库

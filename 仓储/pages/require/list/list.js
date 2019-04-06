@@ -1,48 +1,38 @@
-var util = require('../../utils/util.js');
-var api = require('../../config/api.js');
-var app = getApp();
+var util = require('../../../utils/util.js');
+var api = require('../../../config/api.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    url: app.globalData.url,
-    flag:false
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     //this.loadData();
+    var that = this;
+    //调用加载数据的方法
+    that.loadData()
   },
-  // loadData: function () {
-  //   var that = this;
-  //   util.request(api.SelectOrderByStatus + '?checkStatus=' + 1).then(function (res) {
-  //     wx.hideLoading();
-  //     var array = res.data.data
-      
-  //     that.setData({
-  //       item: array
-  //     })
-  //   })
-  // },
-  searchHandle:function(e){
-    var searchContent=e.detail.value
-    var that=this;
-    util.request(api.SearchProduct + '?productName=' + searchContent).then(function (res) {
+  loadData: function () {
+    var that = this;
+    util.request(api.SelectSorageOrder + '?type=' + 0).then(function (res) {
+      console.log(res)
       wx.hideLoading();
-      if (res.data.status == 0) {
-        var array = res.data.data.list
-        console.log(res)
-        that.setData({
-          item: array,
-          flag: true
-        })
-      }
+      var array = res.data.data
+      that.setData({
+        item: array
+      })
     })
-
+  },
+  toStandardMaterial:function(options){
+    let orderNo=options.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../../standard-material/standard-material?orderNo=' + orderNo,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

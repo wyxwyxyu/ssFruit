@@ -16,8 +16,10 @@ module.exports = {
   GetProductDetail: ApiRootUrl + 'product/getProductDetail.do',   //获取商品详情
   PutIn: ApiRootUrl + 'storage/putIn.do',   //入库
   SelectOrder: ApiRootUrl + 'order/selectOrderByStatus.do',   //根据订单状态查询订单
+  SelectSorageOrder: ApiRootUrl + 'storage/selectAllStorageRecord.do',//查询所有存储记录
   SelectByOrdNo: ApiRootUrl + 'order/selectOrderVorByOrderNo.do',//根据订单号查订单详情
   PutOutAfterScan: ApiRootUrl +'standard/storingStandardMaterialByOrder.do',//根据用户订单分拣出库
   FinishPicking: ApiRootUrl + 'order/finishPicking.do',//完成拣货
-  
-};
+  CreateStandardMaterial: ApiRootUrl + 'standard/createStandardMaterial.do',//创建标准包装
+  GetWeight: ApiRootUrl + 'standard/getWeight.do'//获取重量
+}; 

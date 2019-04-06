@@ -4,11 +4,15 @@
     "pages/require/require",
     "pages/record/record",
     "pages/receive/receive",
+    "pages/require/list/list",
     "pages/putIn/putIn",
     "pages/putIn/putInHandle/putInHandle",
     "pages/putOut/putOut",
     "pages/putOut/putOutHandle/putOutHandle",
-    "pages/putOut/putOutScan/putOutScan"
+    "pages/putOut/putOutScan/putOutScan",
+    "pages/standard-material/standard-material",
+    "pages/standard-material/handle/handle",
+    "pages/storage/storage"
   ],
   "window":{
     "backgroundTextStyle":"light",

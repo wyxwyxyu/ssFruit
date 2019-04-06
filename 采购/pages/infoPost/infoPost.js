@@ -113,7 +113,7 @@ Page({
     for (var i = 0; i < list2.length; i++) {
       var flag = 0;
       if (list2[i].name != '' && list2[i].weight != '' && list2[i].price != '' && list2[i].supplyTime != '' && list2[i].name != undefined && list2[i].weight != undefined && list2[i].price != undefined && list2[i].supplyTime != undefined) {
-        util.request(api.Demand + '? materialName =' + list2[i].name + "&weight=" + list2[i].weight + "&expectPrice=" + list2[i].price + "&time=" + list2[i].supplyTime).then(function (res) {
+        util.request(api.Demand + "?materialName=" + list2[i].name + "&weight=" + list2[i].weight + "&expectPrice=" + list2[i].price + "&time=" + list2[i].supplyTime).then(function (res) {
           if (res.data.status == 0) {
             flag++;
             if (flag == list2.length) {

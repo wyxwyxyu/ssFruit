@@ -1,0 +1,17 @@
+<view style="height:{{height}}px;">
+  <scroll-view scroll-y style="height: {{listheight}}px;" >
+    <view wx:for="{{item}}" wx:if='{{item != 0}}'>
+      <view class="content">
+        <view class="list-left">
+          <view class="left-top">
+            <text>原料名称：{{item.materialName}}</text>
+            <text>重量：{{item.weight}}千克</text>
+          </view>
+          <view class="left-btm">
+            <button class="right-btn" type='primary' size='mini' data-id="{{item.orderNo}}" data-name="{{item.materialName}}" data-weight="{{item.weight}}" bindtap="click">记录仓储位置</button>
+          </view>
+      </view>
+    </view></view>
+  </scroll-view>
+</view>
+

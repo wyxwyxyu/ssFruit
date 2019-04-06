@@ -36,7 +36,7 @@ Page({
   confirm: function () {
     var id=this.data.id;
     var money=this.data.money;
-    var way=this.data.index+1;
+    var way =parseInt(this.data.index)+1;
     if (id != '' && money != '' && way != '' && id != undefined && money != undefined && way != undefined){
       util.request(api.AddFinalMoneypost + '?ordNo=' + id + '&finalMoney=' + money + '&finalMoneyType=' + way).then(function (res) {
         if(res.data.status==0){

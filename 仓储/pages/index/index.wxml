@@ -1,4 +1,7 @@
 <button bindtap='submitInfo'>记录仓储位置</button>
+<button bindtap='getInfo'>查看已仓储订单</button>
+<!-- <button bindtap='standardMaterial'>分拣</button> -->
 <button bindtap='chooseSupply'>入库</button>
 <button bindtap='infoRecept'>出库拣货</button>
+<button bindtap='getStorage'>查看库存数量</button>
 

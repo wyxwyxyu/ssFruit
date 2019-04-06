@@ -1,6 +1,6 @@
 <view class='top'> 
 <text bindtap='showOrderCheck' class="spec-cell {{show1==1?'tapd-spec-cell':''}}">待验收</text>
-<text bindtap='showOrderFinalPay' class="spec-cell {{show1==2?'tapd-spec-cell':''}}">支付尾款</text>
+<text bindtap='showOrderFinalPay' class="spec-cell {{show1==2?'tapd-spec-cell':''}}">待支付尾款</text>
 <text bindtap='refuseOrder' class="spec-cell {{show1==3?'tapd-spec-cell':''}}">验收未通过</text>
 </view>
 <scroll-view scroll-y style="height: {{listheight}}px;margin-top:30rpx;" bindscrolltoupper="upper" bindscrolltolower="lower">

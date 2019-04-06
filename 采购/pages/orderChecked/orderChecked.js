@@ -119,13 +119,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if(this.data.show==1){
-      this.loadData();
-    } else if (this.data.show == 2){
-      this.loadData2();
-    } else if (this.data.show == 3){
-      this.loadData3();
-    }
+    this.loadData();
+    this.loadData2();
+    this.loadData3();
   },
 
   /**

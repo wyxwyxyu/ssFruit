@@ -8,29 +8,34 @@ Page({
    */
   data: {
     url: app.globalData.url,
-    flag:false
+    flag: false,
+    orderNo:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     //this.loadData();
+    console.log(options)
+    this.setData({
+      orderNo:options.orderNo
+    })
+    if (this.data.orderNo == undefined || this.data.orderNo == '' || this.data.orderNo==null){
+      wx.showToast({
+        title: '网络错误',
+        icon:'none'
+      })
+      setTimeout(function () {
+        wx.reLaunch({
+          url: '../index/index',
+        })
+      }, 1500)
+     
+    }
   },
-  // loadData: function () {
-  //   var that = this;
-  //   util.request(api.SelectOrderByStatus + '?checkStatus=' + 1).then(function (res) {
-  //     wx.hideLoading();
-  //     var array = res.data.data
-      
-  //     that.setData({
-  //       item: array
-  //     })
-  //   })
-  // },
-  searchHandle:function(e){
-    var searchContent=e.detail.value
-    var that=this;
+  searchHandle: function (e) {
+    var searchContent = e.detail.value
+    var that = this;
     util.request(api.SearchProduct + '?productName=' + searchContent).then(function (res) {
       wx.hideLoading();
       if (res.data.status == 0) {

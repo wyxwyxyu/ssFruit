@@ -1,0 +1,65 @@
+.spec-wrap {
+  display: flex;
+  margin-top: 4rpx;
+}
+.spec-descript{
+  display: flex;
+  color:  #969696;
+  margin-left: 6rpx;
+}
+.spec-DesName{
+  margin-left: 8rpx;
+}
+.spec-price{
+display: flex;
+}
+.spec-price-active{
+  margin-left: 20rpx;
+}
+.spec-price-count{
+  text-decoration: line-through;
+  color: #969696;
+  margin-left: 12rpx;
+}
+.spec-cell{
+  border: 1rpx #969696 solid;
+  padding: 6rpx 10rpx;
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx;
+}
+.tapd-spec-cell{
+  background-color: #FF4991;
+  color: #fff;
+}
+.content {
+  height: 160 rpx;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  width: 100%;
+  padding: 10px;
+  line-height: 22px;
+  margin-right: 0;
+  -webkit-transition: all 4s;
+  transition: all 4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+  font-size:30 rpx;
+}
+
+.storage1{
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+
+}
+.btn{
+  margin: 20rpx;
+}
+.num{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+}

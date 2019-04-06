@@ -20,6 +20,7 @@ Page({
   loadData: function () {
     var that = this;
     util.request(api.DemandRecept + '?status=' + 1).then(function (res) {
+      console.log(res)
       var array = res.data.data
       that.setData({
         item: array

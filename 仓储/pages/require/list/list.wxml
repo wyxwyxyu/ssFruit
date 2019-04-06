@@ -1,0 +1,24 @@
+<view style="height:{{height}}px;">
+  <scroll-view scroll-y style="height: {{listheight}}px;">
+    <view wx:for="{{item}}" wx:if='{{item != 0}}'>
+      <view class="content">
+        <view class="list-left">
+          <view class="left-top">
+            <text>订单编号：{{item.purchaseOrderNo}}</text>
+          </view>
+          <view class="left-top">
+            <text>原料名称：{{item.materialName}}</text>
+            <text>重量：{{item.weight}}千克</text>
+          </view>
+          <view class="left-top">
+            <text>货架号：{{item.shelfNo}}</text>
+            <text>层数：{{item.row}}千克</text>
+            <text>列数：{{item.column}}千克</text>
+          </view>
+        </view>
+      </view>
+      <button bindtap='toStandardMaterial' data-id="{{item.purchaseOrderNo}}">去分拣</button>
+    </view>
+
+  </scroll-view>
+  </view>

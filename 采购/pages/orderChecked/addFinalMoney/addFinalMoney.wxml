@@ -4,7 +4,7 @@
     请选择支付方式：{{array[index]}}
   </view>
 </picker>
-<view style='display:flex'>¥<input style='margin-left:5rpx;' placeholder="请输入支付的尾款金额" bindinput='money'></input>
+<view style='display:flex'>¥<input type='digit' style='margin-left:5rpx;' placeholder="请输入支付的尾款金额" bindinput='money'></input>
 </view>
 <button bindtap='confirm'>确定</button>
   

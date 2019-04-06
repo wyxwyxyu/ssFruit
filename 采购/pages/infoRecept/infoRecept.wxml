@@ -8,6 +8,6 @@
 
 </view>
   <modal hidden="{{hiddenmodalput}}" title="请输入期望单价" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id="{{modalid}}">
-    <input type='digit' placeholder="请输入内容" bindblur='inputHandle' value="{{priceValue}}" auto-focus/>
+    <input type='digit' placeholder="请输入内容" type='digit' bindblur='inputHandle' value="{{priceValue}}" auto-focus/>
 </modal>
 </scroll-view>
